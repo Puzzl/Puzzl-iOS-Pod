@@ -38,7 +38,7 @@ $ pod install
 
 1. **Add usage descriptions to application Info.plist**
 
-> Not adding these usage descriptions causes system to kill application when it requests the permissions when needed.
+> Not adding these usage descriptions causes the system to kill application when it requests the permissions when needed.
 
 Veriff iOS SDK requires camera and microphone permissions for capturing photos an video during identification. Your application is responsible to describe the reason why camera and microphone is used. You must add 2 descriptions listed below to `info.plist` of your application with the explanation of the usage.
 
