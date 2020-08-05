@@ -52,7 +52,7 @@ It should look like:
 
 2. **Remove any references to the Scene Delegate in App Delegate**
 
-You will need to delete your `SceneDelegate.swift` file and remove any references to the Scene Delegate in your `AppDelegate.swift` file. You will also need to instantiate just below your AppDelegate class definition: 
+You will need to delete your `SceneDelegate.swift` file and remove any references to the Scene Delegate in your `AppDelegate.swift` file. You will also need to instantiate as the first line in your AppDelegate class definition: 
 
   ```swift
   var window:UIWindow?
