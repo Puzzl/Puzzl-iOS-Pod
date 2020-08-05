@@ -80,11 +80,11 @@ You will need to delete your `SceneDelegate.swift` file and remove any reference
 4. Call the 'showOnboardingWith' method from Puzzl. Example:
 
     ```swift
-    Puzzl.setDelegate(from: <YOUR VIEW CONTROLLER>)
-    Puzzl.showOnboarding(apiKey: <PUZZL LIVE KEY>,
-                             companyID: <PUZZL COMPANY ID>,
-                             workerID: <PUZZL EMPLOYEE ID>,
-                             from: <YOUR VIEW CONTROLLER>)
+    Puzzl.setDelegate(from: self)
+    Puzzl.showOnboardingWith(apiKey: "ce1bc81624c943c6b47a9fbbac2aac53",
+        companyID: "f93c5242527611ea8edb777ca61192b5",
+        employeeID: "5f19d4537176de4e057d8a33",
+        from: self)
     ```
 
 5. To track the status of the Puzzl onboarding process, create a new method:
@@ -94,11 +94,12 @@ You will need to delete your `SceneDelegate.swift` file and remove any reference
         func getStatus(status: PuzzlStatus) {
             switch status {
             case .error:
+                print(status)
                 print("Error")
-    						//handle error in onboarding
-            case .success:						
+                            //handle error in onboarding
+            case .success:
                 print("Success")
-    						//handle successful onboarding
+                            //handle successful onboarding
             }
         }
     }
