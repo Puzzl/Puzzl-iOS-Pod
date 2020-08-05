@@ -48,8 +48,7 @@ Veriff iOS SDK requires camera and microphone permissions for capturing photos a
 It should look like:
 
 <div  style="text-align:center"><img src="/info_plist.png" alt="plist.info_file"/></div>
-
-
+<br /> 
 
 2. **Remove any references to the Scene Delegate**
 
