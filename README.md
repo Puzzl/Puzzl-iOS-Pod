@@ -80,11 +80,11 @@ You will need to delete your `SceneDelegate.swift` file and remove any reference
 4. Call the 'showOnboardingWith' method from Puzzl. Example:
 
     ```swift
-    Puzzl.setDelegate(from: self)
-    Puzzl.showOnboardingWith(apiKey: "ce1bc81624c943c6b47a9fbbac2aac53",
-        companyID: "f93c5242527611ea8edb777ca61192b5",
-        employeeID: "5f19d4537176de4e057d8a33",
-        from: self)
+    Puzzl.setDelegate(from: <YOUR VIEW CONTROLLER>)
+    Puzzl.showOnboardingWith(apiKey: <PUZZL LIVE KEY>,
+        companyID: <PUZZL COMPANY ID>,
+        employeeID: <PUZZL EMPLOYEE ID>,
+        from: <YOUR VIEW CONTROLLER>)
     ```
 
 5. To track the status of the Puzzl onboarding process, create a new method:
