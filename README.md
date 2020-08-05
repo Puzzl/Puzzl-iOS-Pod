@@ -57,6 +57,7 @@ You will need to delete your `SceneDelegate.swift` file and remove any reference
     var window:UIWindow?
     ```
 
+### Add the Puzzl onboarding process
 
 1. Import Puzzl into your code. In order to use the Puzzl SDK, import it in the class that will use the SDK (typically a View Controller).
 
