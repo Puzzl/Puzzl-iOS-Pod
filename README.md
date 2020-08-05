@@ -34,6 +34,8 @@ $ pod install
 
 ## Using the Puzzl iOS SDK
 
+### Configure your app to work with the Veriff iOS SDK
+
 1. **Add usage descriptions to application Info.plist**
 
 > Not adding these usage descriptions causes system to kill application when it requests the permissions when needed.
@@ -45,7 +47,16 @@ Veriff iOS SDK requires camera and microphone permissions for capturing photos a
 
 It should look like:
 
-<div  style="text-align:center"><img src="/info_plist.png" alt="plist.info_file" width="200"/></div>
+<div  style="text-align:center"><img src="/info_plist.png" alt="plist.info_file"/></div>
+
+2. **Remove any references to the Scene Delegate**
+
+You will need to delete your `SceneDelegate.swift` file and remove any references to the Scene Delegate in your `AppDelegate.swift` file. You will also need to instantiate just below your AppDelegate class definition. 
+
+    ```swift
+    var window:UIWindow?
+    ```
+
 
 1. Import Puzzl into your code. In order to use the Puzzl SDK, import it in the class that will use the SDK (typically a View Controller).
 
@@ -62,8 +73,9 @@ It should look like:
 
     Puzzl.setDelegate(from: self)
     ```
+ 
 
-3. Call the 'showOnboardingWith' method from Puzzl. Example:
+4. Call the 'showOnboardingWith' method from Puzzl. Example:
 
     ```swift
     Puzzl.setDelegate(from: <YOUR VIEW CONTROLLER>)
@@ -73,7 +85,7 @@ It should look like:
                              from: <YOUR VIEW CONTROLLER>)
     ```
 
-4. To track the status of the Puzzl onboarding process, create a new method:
+5. To track the status of the Puzzl onboarding process, create a new method:
 
     ```swift
     extension ViewController: PuzzlDelegate {
