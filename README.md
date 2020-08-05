@@ -50,13 +50,18 @@ It should look like:
 <div  style="text-align:center"><img src="/info_plist.png" alt="plist.info_file"/></div>
 <br /> 
 
-2. **Remove any references to the Scene Delegate**
+2. **Remove any references to the Scene Delegate in App Delegate**
 
-You will need to delete your `SceneDelegate.swift` file and remove any references to the Scene Delegate in your `AppDelegate.swift` file. You will also need to instantiate just below your AppDelegate class definition. 
+You will need to delete your `SceneDelegate.swift` file and remove any references to the Scene Delegate in your `AppDelegate.swift` file. You will also need to instantiate just below your AppDelegate class definition: 
 
-    ```swift
-    var window:UIWindow?
-    ```
+  ```swift
+  var window:UIWindow?
+  ```
+
+3. **Remove Scene Delegate references from info.plist**
+
+Also, remove UIApplicationSceneManifest from Info.plist.
+
 
 ### Add the Puzzl onboarding process
 
