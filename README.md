@@ -60,7 +60,7 @@ You will need to delete your `SceneDelegate.swift` file and remove any reference
 
 3. **Remove Scene Delegate references from info.plist**
 
-Also, remove UIApplicationSceneManifest from Info.plist.
+Also, remove UIApplicationSceneManifest from `info.plist`.
 
 
 ### Add the Puzzl onboarding process
