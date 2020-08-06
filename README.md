@@ -40,7 +40,7 @@ $ pod install
 
 > Not adding these usage descriptions causes the system to kill application when it requests the permissions when needed.
 
-Veriff iOS SDK requires camera and microphone permissions for capturing photos an video during identification. Your application is responsible to describe the reason why camera and microphone is used. You must add 2 descriptions listed below to `info.plist` of your application with the explanation of the usage.
+Veriff iOS SDK requires camera and microphone permissions for capturing photos and video during identification. Your application is responsible to describe the reason why camera and microphone is used. You must add 2 descriptions listed below to `info.plist` of your application with the explanation of the usage.
 
 - `NSCameraUsageDescription`
 - `NSMicrophoneUsageDescription`
@@ -58,9 +58,9 @@ You will need to delete your `SceneDelegate.swift` file and remove any reference
   var window:UIWindow?
   ```
 
-3. **Remove Scene Delegate references from info.plist**
+3. **Remove Scene Manifest references from info.plist**
 
-Also, remove UIApplicationSceneManifest from `info.plist`.
+Remove UIApplicationSceneManifest from `info.plist`.
 
 
 ### Add the Puzzl onboarding process
@@ -75,24 +75,28 @@ Also, remove UIApplicationSceneManifest from `info.plist`.
 
     ```swift
     Puzzl.setDelegate(from: <YOUR VIEW CONTROLLER>)
-
-    Example:
-
-    Puzzl.setDelegate(from: self)
     ```
  
 
 4. Call the 'showOnboardingWith' method from Puzzl. Example:
 
     ```swift
-    Puzzl.setDelegate(from: <YOUR VIEW CONTROLLER>)
     Puzzl.showOnboardingWith(apiKey: <PUZZL LIVE KEY>,
         companyID: <PUZZL COMPANY ID>,
         employeeID: <PUZZL EMPLOYEE ID>,
         from: <YOUR VIEW CONTROLLER>)
     ```
 
-5. To track the status of the Puzzl onboarding process, create a new method:
+    Full Example:
+    ```swift
+    Puzzl.setDelegate(from: self)
+    Puzzl.showOnboardingWith(apiKey: <PUZZL LIVE KEY>,
+        companyID: <PUZZL COMPANY ID>,
+        employeeID: <PUZZL EMPLOYEE ID>,
+        from: self)
+    ```
+
+5. For the Puzzl Delegate to work and to track the status of the Puzzl onboarding process, create a new method:
 
     ```swift
     extension ViewController: PuzzlDelegate {
