@@ -19,7 +19,7 @@ $ sudo gem install cocoapods
 ```bash
 target "YourProjectNameHere" do
 use_frameworks!
-	pod 'puzzl-iOS', '1.7.0'
+	pod 'puzzl-iOS'
 end
 ```
 
