@@ -43,7 +43,7 @@ $ pod install
 The third party iOS SDK requires camera and microphone permissions for capturing photos and video during identification. Your application is responsible to describe the reason why camera and microphone is used. You must add 2 descriptions listed below to `info.plist` of your application with the explanation of the usage.
 
 - `Enable Camera permissions to start verfication. Please have your SS Card ready for this step and take a picture of it`
-- `Please enable Microphone for a third party Verification `
+- `Please enable Microphone for a third party's verification `
 
 It should look like:
 
