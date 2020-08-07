@@ -34,16 +34,16 @@ $ pod install
 
 ## Using the Puzzl iOS SDK
 
-### Configure your app to work with the Veriff iOS SDK
+### Configure your app to work with the Third Party iOS SDK
 
 1. **Add usage descriptions to application Info.plist**
 
 > Not adding these usage descriptions causes the system to kill application when it requests the permissions when needed.
 
-Veriff iOS SDK requires camera and microphone permissions for capturing photos and video during identification. Your application is responsible to describe the reason why camera and microphone is used. You must add 2 descriptions listed below to `info.plist` of your application with the explanation of the usage.
+Third Party iOS SDK requires camera and microphone permissions for capturing photos and video during identification. Your application is responsible to describe the reason why camera and microphone is used. You must add 2 descriptions listed below to `info.plist` of your application with the explanation of the usage.
 
 - `Enable Camera permissions to start verfication. Please have your SS Card ready for this step and take a picture of it`
-- `Please enable Microphone for Veriff Verification `
+- `Please enable Microphone for Third Party Verification `
 
 It should look like:
 
