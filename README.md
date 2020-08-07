@@ -42,8 +42,8 @@ $ pod install
 
 Veriff iOS SDK requires camera and microphone permissions for capturing photos and video during identification. Your application is responsible to describe the reason why camera and microphone is used. You must add 2 descriptions listed below to `info.plist` of your application with the explanation of the usage.
 
-- `NSCameraUsageDescription`
-- `NSMicrophoneUsageDescription`
+- `Enable Camera permissions to start verfication. Please have your SS Card ready for this step and take a picture of it`
+- `Please enable Microphone for Veriff Verification `
 
 It should look like:
 
